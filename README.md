@@ -13,3 +13,8 @@ We aim with this repository to provide an as-extensive-as-possible dataset for l
 This repository is structured into regions (i.e. a batch of countries having roughly the same language aspects), countries (i.e. Morocco, Algeria, Tunisia) and then country regions (i.e. northern, eastern etc... depending language differences in the same country).
 Thus, the repo is structured as follows: Dataset/Regions/Countries/Country-regions/data-types.
 The data-type part of the repo structures data into words, phrases and sentences, paragraphs, then long texts.
+
+# But why launch a latinAr dataset?!
+Well, because being a <b>deep learning driven team of individuals</b>, and after being disappointed that there's a huge lack in structured latinAr data, we've realized that we could not perform anything deep learning-related for the modern arabic language! <b>So we've decided to create one. For the sake of AI-democratization</b>.
+
+Want to contribute (we need you!)? or interested in any way? Let us know.
