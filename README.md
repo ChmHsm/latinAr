@@ -11,5 +11,5 @@ The word "إذهب" is arabic for "Go" in English. And because most arabic-speak
 We aim with this repository to provide an as-extensive-as-possible dataset for latin written arabic, hence the name "latinAr". Specifically regions such as Morocco, Algeria and Tunisia, but also Egypt, Mauritania, Lybia and eventually more depending on adoption and need.
 
 This repository is structured into regions (i.e. a batch of countries having roughly the same language aspects), countries (i.e. Morocco, Algeria, Tunisia) and then country regions (i.e. northern, eastern etc... depending language differences in the same country).
-Thus, the repo is structured as follows: Datasets/Region/Country/Country-region/data-type
+Thus, the repo is structured as follows: Dataset/Regions/Countries/Country-regions/data-types.
 The data-type part of the repo structures data into words, phrases and sentences, paragraphs, then long texts.
