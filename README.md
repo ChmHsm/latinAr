@@ -19,3 +19,13 @@ The data-type part of the repo structures data into words, phrases and sentences
 Well, because being a <b>deep learning driven team of individuals</b>, and after being disappointed that there's a huge lack in structured latinAr data, we've realized that we could not perform anything deep learning-related for the dialectal arabic language! <b>So we've decided to create one. For the sake of AI democratization</b>.
 
 Want to contribute (we need you!)? or interested in any way? Have suggestions? Please let us know.
+
+# What's this repo going to be used for actually?
+Mainly, this repo is a training, validation and evaluation dataset for the dialectal arabic RNN-related models:
+Language modeling & generation
+Word representation (word embeddings, Word2Vec)
+Sentiment analysis
+Machine translation
+Text-to-speech (soon)
+Speech-to-text (soon)
+And others...
