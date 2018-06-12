@@ -16,6 +16,6 @@ Thus, the repo is structured as follows: <b>Dataset/Regions/Countries/Country-re
 The data-type part of the repo structures data into words, phrases and sentences, paragraphs, then long texts.
 
 # But why launch a latinAr dataset?!
-Well, because being a <b>deep learning driven team of individuals</b>, and after being disappointed that there's a huge lack in structured latinAr data, we've realized that we could not perform anything deep learning-related for the dialectal arabic language! <b>So we've decided to create one. For the sake of AI-democratization</b>.
+Well, because being a <b>deep learning driven team of individuals</b>, and after being disappointed that there's a huge lack in structured latinAr data, we've realized that we could not perform anything deep learning-related for the dialectal arabic language! <b>So we've decided to create one. For the sake of AI democratization</b>.
 
 Want to contribute (we need you!)? or interested in any way? Have suggestions? Please let us know.
