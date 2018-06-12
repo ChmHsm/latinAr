@@ -5,7 +5,7 @@ An extensive dataset for latin-written dialectal arabic.
 Latin-written dialectal Arabic is any text written in latin alphabet, mainly english and french, but which represents dialectal arabic words and expressions. Here are some examples:
 
 # Examples 
-The word "إذهب" (not dialectal, used here for clarity) is arabic for "Go" in English. And because most arabic-speaking countries don't use arabic keyboards for short and even long text messaging (i.e. chatting), it is written "Idhab" (Frenchly-pronounced) or "Edheb" (Englishly-prnonouced). The ultimate goal behind this repo is to provide a <b>latinAR-to-Classical-arabic mapping</b>, so for the word "إذهب", we'll have the following mapping: <b>{Idhab: إذهب}</b> for frenchly-pronouncing regions and <b>{Edheb: إذهب}</b> englishly-pronouncing regions.
+The word "إذهب" (not dialectal, used here for clarity) is arabic for "Go" in English. And because most arabic-speaking countries don't use arabic keyboards for short and even long text messaging (i.e. chatting), it is written "Idhab" (Frenchly-pronounced) or "Edheb" (Englishly-prnonouced). The ultimate goal behind this repo is to provide a <b>latinAR-to-Classical-arabic mapping</b>, so for the word "إذهب", we'll have the following mapping: <b>{Idhab: إذهب}</b> for frenchly-pronouncing regions and <b>{Edheb: إذهب}</b> englishly-pronouncing regions.<br/>
 A dialectal example: "sir" (frenchly) or "seer" (englishly), not the english "sir", but maghrebi-dialectal arabic for the word "إذهب". The mapping would consequently be <b>{sir: إذهب}</b>. 
 
 # The Goal
