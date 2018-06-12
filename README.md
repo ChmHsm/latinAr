@@ -21,11 +21,11 @@ Well, because being a <b>deep learning driven team of individuals</b>, and after
 Want to contribute (we need you!)? or interested in any way? Have suggestions? Please let us know.
 
 # What's this repo going to be used for actually?
-Mainly, this repo is a training, validation and evaluation dataset for the dialectal arabic RNN-related models:
-Language modeling & generation
-Word representation (word embeddings, Word2Vec)
-Sentiment analysis
-Machine translation
-Text-to-speech (soon)
-Speech-to-text (soon)
+Mainly, this repo is a training, validation and evaluation dataset for the dialectal arabic RNN-related models:<br/>
+Language modeling & generation<br/>
+Word representation (word embeddings, Word2Vec)<br/>
+Sentiment analysis<br/>
+Machine translation<br/>
+Text-to-speech (soon)<br/>
+Speech-to-text (soon)<br/>
 And others...
