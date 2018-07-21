@@ -3,12 +3,16 @@ import re
 __author__ = 'ChmHsm'
 global_file_path = "..\\raw_data\\lyrics\\strict_arabic\\Muslim - 3ayn l7amra.txt"
 
-# Match characters written in arabic letters, strip latin chars and special chars except punctuation:
+# TODO add latin chars and decimal matching to regexp:
+# Strictly match arabic letters, strip all special chars except punctuation,
+# Remove EVERYTHING between parentheses (), brackets [], and curly brackets {}
 # i.e.: .حيت هو حقّار، الحبس ولّا القبر
 strict_arabic_regexp = r'[^\w]'
 
-# TODO write regexp to match strings written in french or english arabic,
-# but strip strict arabic and special chars except numbers from 0 to 9 and punctuation
+# TODO write regexp to match strings written in latin arabic:
+# strictly match latin chars and numbers from 0 to 9 and punctuation
+# remove special chars except punctuation
+# Remove EVERYTHING between parentheses (), brackets [], and curly brackets {}
 # i.e.: 3chiri 3ayno 7amra, 9elbo cha3el jamra
 latin_arabic_regexp = r''
 
