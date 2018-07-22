@@ -1,18 +1,17 @@
-import re
-
 __author__ = 'ChmHsm'
-global_file_path = "..\\raw_data\\lyrics\\strict_arabic\\Muslim - 3ayn l7amra.txt"
 
-# TODO add latin chars and decimal matching to regexp:
-# Strictly match arabic letters, strip all special chars except punctuation,
-# Remove EVERYTHING between parentheses (), brackets [], and curly brackets {}
-# i.e.: .حيت هو حقّار، الحبس ولّا القبر
-strict_arabic_regexp = r'[^\w]'
+import re
+import os
+
+from code.global_utils import GlobalUtils
+
+global_file_path = GlobalUtils.latinAr_test_file
+global_utils = GlobalUtils()
 
 # TODO write regexp to match strings written in latin arabic:
 # strictly match latin chars and numbers from 0 to 9 and punctuation
 # remove special chars except punctuation
-# Remove EVERYTHING between parentheses (), brackets [], and curly brackets {}
+# Remove EVERYTHING in parentheses (), brackets [], and curly brackets {}
 # i.e.: 3chiri 3ayno 7amra, 9elbo cha3el jamra
 latin_arabic_regexp = r''
 
@@ -37,14 +36,29 @@ def filename_from_file_path(file_path):
     return split_file_path[-1]
 
 
+def delete_file_if_exists(file_path):
+    if os.path.exists(file_path):
+        os.remove(file_path)
+
+
 def pre_process_and_write_to_file():
     list_of_file_lines = import_raw_file(global_file_path)
     tmp_list = []
+    destination_file_path = global_utils.pre_processed_data_directory + "\\lyrics\\strict_arabic\\" + \
+                            filename_from_file_path(global_file_path)
+    delete_file_if_exists(destination_file_path)
+    # TODO new written file has unexpected content (probably encoding)
+    f = open(destination_file_path, "x", encoding="utf-16le")
     for tmpLine in list_of_file_lines:
-        tmp_list.append(re.sub(strict_arabic_regexp, ' ', tmpLine))
+        tmp_matched = re.findall(
+            global_utils.get_regexp("arabic_letters_with_chakl_and_numbers_and_arabic_punctuation"),
+            tmpLine)
+        if tmp_matched:
+            tmp_list.append(tmp_matched)
+            f.write(tmp_matched[0])
     return tmp_list
 
 
 pre_processed_result = pre_process_and_write_to_file()
 for line in pre_processed_result:
-    print(line)
+    print(line[0])
