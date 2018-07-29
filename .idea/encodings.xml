@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-16LE">
+    <file url="file://$PROJECT_DIR$/actual_code/__init__.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/actual_code/global_utils.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataset/regions/Maghreb/Morocco/Northern -chamali/phrases" charset="UTF-16LE" />
+    <file url="file://$PROJECT_DIR$/preprocessed_data/lyrics/strict_arabic/Muslim - 3ayn l7amra.txt" charset="UTF-16LE" />
+    <file url="file://$PROJECT_DIR$/raw_data/lyrics/latin_arabic/Muslim - 3ayn l7amra" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/raw_data/lyrics/strict_arabic/Muslim - 3ayn l7amra.txt" charset="UTF-16LE" />
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-16LE" />
   </component>
 </project>

@@ -1,1 +1,5 @@
-{mxi: إذهب,cuchara:ملعقة,caratera:الطريق,lexin:البرتقال }
+[
+{"latin_ar":["mxi"], "classical_arabic":["إذهب"]},
+{"latin_ar":["lcuchara"], "classical_arabic":["الطريق"]},
+{"latin_ar":["lexin"], "classical_arabic":["البرتقال"]}
+]
