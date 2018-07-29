@@ -87,7 +87,7 @@ class GlobalUtils:
                     tmpLine)
                 if tmp_matched:
                     tmp_list.append(tmp_matched)
-                    f.write(tmp_matched[0])
+                    f.write(tmp_matched[0]+"\n")
             return tmp_list
 
     @staticmethod
