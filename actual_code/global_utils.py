@@ -27,7 +27,7 @@ class GlobalUtils:
 
     @staticmethod
     def load_lines_from_json_file(json_file_path):
-        with open(json_file_path, encoding="utf-16le") as f:
+        with open(json_file_path, encoding="utf-16") as f:
             data = json.load(f)
             return data
 
@@ -51,7 +51,7 @@ class GlobalUtils:
     def write_json_to_file(json_data, file_path):
         GlobalUtils.delete_file_if_exists(file_path)
         lines = json.dumps(json_data,ensure_ascii=False, indent=4)
-        with open(file_path, 'x', encoding="utf-16le") as outfile:
+        with open(file_path, 'x', encoding="utf-16") as outfile:
             outfile.write(lines)
 
     @staticmethod
@@ -80,7 +80,7 @@ class GlobalUtils:
         tmp_list = []
         destination_file_path = preprocessed_destination_directory + "\\" + GlobalUtils.filename_from_file_path(raw_file_path)
         GlobalUtils.delete_file_if_exists(destination_file_path)
-        with open(destination_file_path, "x", encoding="utf-16le") as f:
+        with open(destination_file_path, "x", encoding="utf-16") as f:
             for tmpLine in list_of_file_lines:
                 tmp_matched = re.findall(
                     GlobalUtils.get_regexp("arabic_letters_with_chakl_and_numbers_and_arabic_punctuation"),
