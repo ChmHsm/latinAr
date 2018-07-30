@@ -1,7 +1,0 @@
-{
-  "arabic_letters": "^[\u0621-\u064A\u06c3\u06cc\u06d5 ]+$",
-  "arabic_letters_and_numbers": "^[\u0621-\u064A\u06c3\u06cc\u06d5\u0660-\u0669 ]+$",
-  "arabic_letters_with_chakl_and_numbers" : "^[\u0621-\u0655\u0671-\u0676\u06af\u06c3\u06cc\u06d5\u0660-\u0669 ]+$",
-  "arabic_letters_with_chakl_and_numbers_and_arabic_punctuation" :
-  "^[\u0621-\u0655\u0671-\u0676\u06af\u06c3\u06cc\u06d5\u060c\u061f\u061b\u0021\u003a\u0660-\u0669 ]+$"
-}
