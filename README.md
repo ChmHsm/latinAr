@@ -9,7 +9,7 @@ The word "إذهب" (not dialectal, used here for clarity) is arabic for "Go" in
 A dialectal example: "sir" (frenchly) or "seer" (englishly), not the english "sir", but maghrebi-dialectal arabic for the word "إذهب". The mapping would consequently be <b>{sir: إذهب}</b>. 
 
 # The Goal
-We aim with this repository to provide an as-extensive-as-possible dataset (CSV files actually) for latin written arabic, hence the name "latinAr". Specifically regions such as Morocco, Algeria and Tunisia, but also Egypt, Mauritania, Lybia, Middle-east and eventually more depending on adoption and/or need.
+We aim with this repository to provide an as-extensive-as-possible dataset (<b>CSV/JSON</b> files actually) for latin written arabic, hence the name "latinAr". Specifically regions such as Morocco, Algeria and Tunisia, but also Egypt, Mauritania, Lybia, Middle-east and eventually more depending on adoption and/or need.
 
 This repository is structured into regions (i.e. a batch of countries that have roughly the same language aspects), countries (i.e. Morocco, Algeria, Tunisia) and then country regions (i.e. northern, eastern etc... depending on language differences in the same country).
 Thus, the repo is structured as follows: <b>Dataset/Regions/Countries/Country-regions/data-types</b>.
