@@ -9,18 +9,18 @@ The word "إذهب" (not dialectal, used here for clarity) is arabic for "Go" in
 A dialectal example: "sir" (frenchly) or "seer" (englishly), not the english "sir", but maghrebi-dialectal arabic for the word "إذهب". The mapping would consequently be <b>{sir: إذهب}</b>. 
 
 # The Goal
-We aim with this repository to provide an as-extensive-as-possible dataset (CSV files actually) for latin written arabic, hence the name "latinAr". Specifically regions such as Morocco, Algeria and Tunisia, but also Egypt, Mauritania, Lybia, Middle-east and eventually more depending on adoption and/or need.
+We aim with this repository to provide an as-extensive-as-possible dataset (<b>CSV/JSON</b> files actually) for latin written arabic, hence the name "latinAr". Specifically regions such as Morocco, Algeria and Tunisia, but also Egypt, Mauritania, Lybia, Middle-east and eventually more depending on adoption and/or need.
 
 This repository is structured into regions (i.e. a batch of countries that have roughly the same language aspects), countries (i.e. Morocco, Algeria, Tunisia) and then country regions (i.e. northern, eastern etc... depending on language differences in the same country).
 Thus, the repo is structured as follows: <b>Dataset/Regions/Countries/Country-regions/data-types</b>.
 The data-type part of the repo structures data into words, phrases and sentences, paragraphs, then long texts.
 
-# But why launch a latinAr dataset?!
+# Why launch a latinAr dataset?!
 Well, because being a <b>deep learning driven team of individuals</b>, and after being disappointed that there's a huge lack in structured latinAr data, we've realized that we could not perform anything deep learning-related for the dialectal arabic language! <b>So we've decided to create one. For the sake of AI democratization</b>.
 
 Want to contribute (we need you!)? or interested in any way? Have suggestions? Please let us know.
 
-# What's this repo going to be used for actually?
+# What's this repo going to be used for anyway?
 Mainly, this repo is a training, validation and evaluation dataset for dialectal arabic RNN and CNN-related models:<br/>
 Language modeling & generation<br/>
 Word representation (word embeddings, Word2Vec,...)<br/>
