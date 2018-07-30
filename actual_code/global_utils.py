@@ -38,13 +38,14 @@ class GlobalUtils:
             for inner_line in line["latin_ar"]:
                 if not list_of_existing_lines.__contains__(inner_line):
                     list_of_existing_lines.append(inner_line)
-
+        count = 0
         for line in list_of_words:
             if not list_of_existing_lines.__contains__(line[0]):
+                count += 1
                 list_of_existing_lines.append(line[0])
                 lines.append({"latin_ar": line, "classical_arabic":""})
 
-        return lines
+        return lines, count
 
     @staticmethod
     def write_json_to_file(json_data, file_path):
