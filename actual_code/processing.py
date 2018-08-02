@@ -6,7 +6,7 @@ __author__ = 'ChmHsm'
 global_utils = GlobalUtils()
 
 strict_arabic_or_latin_arabic = "strict_arabic"
-dataset_destination_file_path = global_utils.construct_data_url_from_parameters("Maghreb", "Morocco", "Northern -chamali", "phrases")
+dataset_destination_file_path = global_utils.construct_data_url_from_parameters("Maghreb", "Morocco", "Northern -chamali", "ready_data", "phrases")
 pre_processed_data_directory = "..\\data\\regions\\Maghreb\\Morocco\\Northern -chamali\\preprocessed_data"
 raw_files_directory = "..\\data\\regions\\Maghreb\\Morocco\\Northern -chamali\\raw_data\\lyrics\\" + strict_arabic_or_latin_arabic
 preprocessed_file_destination = pre_processed_data_directory + "\\lyrics\\" + strict_arabic_or_latin_arabic

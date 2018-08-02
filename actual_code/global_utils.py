@@ -19,10 +19,13 @@ class GlobalUtils:
             return ""
 
     #parameters methods have to strictly respect project hierarchy (with cases) in the data directory
-    # TODO modify this function so as to take one args... parameter and return the appropriate directory
     @staticmethod
-    def construct_data_url_from_parameters(region, country, country_region, data_type):
-        return "..\\data\\regions\\" + region + "\\" + country + "\\" + country_region + "\\" + data_type
+    def construct_data_url_from_parameters(*args):
+        directory_result = ""
+        for directory in args:
+            directory_result += directory + "\\"
+        return directory_result
+        # return "..\\data\\regions\\" + region + "\\" + country + "\\" + country_region + "\\" + data_type
 
     @staticmethod
     def load_lines_from_json_file(json_file_path):
