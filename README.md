@@ -5,7 +5,6 @@ An extensive dataset for latin-written dialectal arabic.
 <b>One-to-one mapping:</b></br>
 {<b>latin_ar_french</b>:"sir", <b>american_english</b>:"go"}</br>
 {<b>latin_ar_arabic</b>:"سير", <b>american_english</b>:"go"}</br></br>
-
 <b>One-to-many mapping:</b></br>
 {<b>latin_ar_french</b>:"sir", <b>classical_arabic</b>:"إذهب", <b>american_english</b>:"go"}</br>
 {<b>latin_ar_arabic</b>:"سير", <b>classical_arabic</b>:"إذهب", <b>american_english</b>:"go"}</br></br>
