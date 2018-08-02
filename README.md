@@ -1,6 +1,16 @@
 # latinAr
 An extensive dataset for latin-written dialectal arabic.
 
+# Quick JSON example
+<b>One-to-many mapping:</b></br>
+{<b>latin_ar</b>:"sir", <b>classical_arabic</b>:"إذهب", <b>american_english</b>:"go"}</br>
+and</br>
+{<b>latin_ar</b>:"سير", <b>classical_arabic</b>:"إذهب", <b>american_english</b>:"go"}</br></br>
+<b>Many-to-many mapping:</b></br>
+{<b>latin_ar</b>:["sir","mchi"], <b>classical_arabic</b>:"إذهب", <b>american_english</b>:"go"}</br>
+and</br>
+{<b>latin_ar</b>:["سير","مشي"], <b>classical_arabic</b>:"إذهب", <b>american_english</b>:"go"}</br>
+
 # What is latin-written Arabic?
 Latin-written dialectal Arabic is any text written in latin alphabet, mainly english or french, but which represents dialectal arabic words and expressions. Here are some examples:
 
