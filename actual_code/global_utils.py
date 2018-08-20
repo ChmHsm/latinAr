@@ -24,7 +24,7 @@ class GlobalUtils:
         directory_result = ""
         for directory in args:
             directory_result += directory + "\\"
-        return directory_result
+        return "..\\data\\regions\\" + directory_result.strip("\\")
         # return "..\\data\\regions\\" + region + "\\" + country + "\\" + country_region + "\\" + data_type
 
     @staticmethod
@@ -34,7 +34,7 @@ class GlobalUtils:
             return data
 
     @staticmethod
-    def add_list_of_words_to_dataset(list_of_words, csv_file_path):
+    def add_list_of_entries_to_dataset(list_of_entries, csv_file_path):
         lines = GlobalUtils.load_lines_from_json_file(csv_file_path)
         list_of_existing_lines = []
         for line in lines:
@@ -42,11 +42,11 @@ class GlobalUtils:
                 if not list_of_existing_lines.__contains__(inner_line):
                     list_of_existing_lines.append(inner_line)
         count = 0
-        for line in list_of_words:
-            if not list_of_existing_lines.__contains__(line[0]):
+        for line in list_of_entries:
+            if not list_of_existing_lines.__contains__(line):
                 count += 1
-                list_of_existing_lines.append(line[0])
-                lines.append({"latin_ar": line, "classical_arabic":""})
+                list_of_existing_lines.append(line)
+                lines.append({"latin_ar": [line], "classical_arabic":""})
 
         return lines, count
 
@@ -80,7 +80,8 @@ class GlobalUtils:
     @staticmethod
     def pre_process_and_write_to_file(raw_file_path, preprocessed_destination_directory):
         list_of_file_lines = GlobalUtils.import_raw_file(raw_file_path)
-        tmp_list = []
+        tmp_phrases_list = []
+        tmp_words_list = []
         destination_file_path = preprocessed_destination_directory + "\\" + GlobalUtils.filename_from_file_path(raw_file_path)
         GlobalUtils.delete_file_if_exists(destination_file_path)
         with open(destination_file_path, "x", encoding="utf-16") as f:
@@ -89,9 +90,11 @@ class GlobalUtils:
                     GlobalUtils.get_regexp("arabic_letters_with_chakl_and_numbers_and_arabic_punctuation"),
                     tmpLine)
                 if tmp_matched:
-                    tmp_list.append(tmp_matched)
+                    for word in tmp_matched[0].split(" "):
+                        tmp_words_list.append(word.strip())
+                    tmp_phrases_list.append(tmp_matched[0].strip())
                     f.write(tmp_matched[0]+"\n")
-            return tmp_list
+            return tmp_phrases_list, tmp_words_list
 
     @staticmethod
     def filename_from_file_path(file_path):
