@@ -7,6 +7,8 @@ from os.path import isfile, join
 __author__ = 'ChmHsm'
 
 regexp_file_path = "..\\data\\regions\\Maghreb\\Morocco\\regular_expressions"
+regex_between_parentheses = r'\([^)]*\)'
+regex_between_brackets = r'\[[^]]*\]'
 
 class GlobalUtils:
 
@@ -78,7 +80,8 @@ class GlobalUtils:
                 return list_of_lines
 
     @staticmethod
-    def pre_process_and_write_to_file(raw_file_path, preprocessed_destination_directory):
+    def pre_process_and_write_to_file(raw_file_path, preprocessed_destination_directory, regex_name,
+                                      remove_between_parentheses = False, remove_between_brackets = False):
         list_of_file_lines = GlobalUtils.import_raw_file(raw_file_path)
         tmp_phrases_list = []
         tmp_words_list = []
@@ -86,14 +89,21 @@ class GlobalUtils:
         GlobalUtils.delete_file_if_exists(destination_file_path)
         with open(destination_file_path, "x", encoding="utf-16") as f:
             for tmpLine in list_of_file_lines:
-                tmp_matched = re.findall(
-                    GlobalUtils.get_regexp("arabic_letters_with_chakl_and_numbers_and_arabic_punctuation"),
-                    tmpLine)
-                if tmp_matched:
-                    for word in tmp_matched[0].split(" "):
-                        tmp_words_list.append(word.strip())
-                    tmp_phrases_list.append(tmp_matched[0].strip())
-                    f.write(tmp_matched[0]+"\n")
+                tmp_parentheses_brackets = tmpLine
+                if remove_between_parentheses:
+                    tmp_parentheses_brackets = re.sub(regex_between_parentheses, '', tmp_parentheses_brackets)
+                if remove_between_brackets:
+                    tmp_parentheses_brackets = re.sub(regex_between_brackets, '', tmp_parentheses_brackets)
+                if len(tmp_parentheses_brackets.strip()) > 0:
+                    tmp_matched = re.findall(
+                        GlobalUtils.get_regexp(regex_name),
+                        tmp_parentheses_brackets)
+                    if tmp_matched:
+                        for word in tmp_matched[0].split(" "):
+                            tmp_words_list.append(word.strip())
+                        if tmp_matched[0].strip() != '':
+                            tmp_phrases_list.append(tmp_matched[0].strip())
+                            f.write(tmp_matched[0]+"\n")
             return tmp_phrases_list, tmp_words_list
 
     @staticmethod
