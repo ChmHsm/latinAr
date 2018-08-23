@@ -20,7 +20,7 @@ class GlobalUtils:
                 return data[regexp_name]
             return ""
 
-    #parameters methods have to strictly respect project hierarchy (with cases) in the data directory
+    #parameters methods have to strictly respect project hierarchy (case-sensitive) in the data directory
     @staticmethod
     def construct_data_url_from_parameters(*args):
         directory_result = ""
@@ -65,11 +65,16 @@ class GlobalUtils:
             os.remove(file_path_to_delete)
 
     @staticmethod
+    def create_directory_if_not_exists(directory_to_create):
+        if not os.path.exists(directory_to_create):
+            os.makedirs(directory_to_create)
+
+    @staticmethod
     def import_raw_file(file_path):
         if file_path == "":
             return []
         else:
-            with open(file_path, encoding="utf-16le") as f:
+            with open(file_path, encoding="utf-16") as f:
                 content = f.readlines()
                 list_of_lines = []
                 for x in content:
@@ -86,6 +91,7 @@ class GlobalUtils:
         tmp_phrases_list = []
         tmp_words_list = []
         destination_file_path = preprocessed_destination_directory + "\\" + GlobalUtils.filename_from_file_path(raw_file_path)
+        GlobalUtils.create_directory_if_not_exists(preprocessed_destination_directory)
         GlobalUtils.delete_file_if_exists(destination_file_path)
         with open(destination_file_path, "x", encoding="utf-16") as f:
             for tmpLine in list_of_file_lines:
@@ -113,5 +119,5 @@ class GlobalUtils:
 
     @staticmethod
     def filenames_from_directory(directory):
-        onlyfiles = [f for f in listdir(directory) if isfile(join(directory, f))]
-        return onlyfiles
+        only_files = [f for f in listdir(directory) if isfile(join(directory, f))]
+        return only_files
